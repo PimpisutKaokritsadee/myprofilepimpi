@@ -3,6 +3,7 @@ export type ProjectKey = "coffee" | "game" | "ceth";
 export type Project = {
   key: ProjectKey;
   title: string;
+  year?: string;
   desc: string;
   tags: string[];
   image: string;
@@ -18,6 +19,7 @@ export type ContentBlock =
 // types/projects.ts
 export type ProjectDetail = {
   title: string;
+  year?: string;
   img: string;
   content: ContentBlock[];
   rows: [string, string | string[]][]; // ← รองรับหลายลิงก์

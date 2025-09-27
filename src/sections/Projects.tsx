@@ -26,10 +26,11 @@ function getModalContent(key: ProjectKey): ProjectDetail {
     case "coffee":
       return {
         title: "Coffee-Shop(D-Coffee)",
+        year: "2024",
         img: "/myprofilepimpi/images/coffee-logg.png",
         content: [
           { type: "p", text: "D-Coffee เป็นระบบจัดการร้านกาแฟ ที่รวมฟังก์ชัน POS (Point of Sale), การจัดการสต็อกสินค้า, สมาชิกและพนักงาน, เงินเดือน/เวลาเข้า-ออกงาน, และ โปรโมชั่น เข้าไว้ด้วยกัน" },
-          { type: "p", text: "โครงการนี้พัฒนาในรูปแบบ กลุ่ม 8 คน โดยแบ่งเป็น 2 เฟส:" },
+          { type: "p", text: "โปรเจ็คนี้พัฒนาในรูปแบบ กลุ่ม 8 คน โดยแบ่งเป็น 2 เฟส:" },
           {
             type: "ol",
             items: [
@@ -44,7 +45,7 @@ function getModalContent(key: ProjectKey): ProjectDetail {
             type: "ul",
             items: [
               "พัฒนา หน้า POS สำหรับขายหน้าร้าน",
-              "พัฒนา หน้าสมาชิก (Member Management) เพื่อจัดการข้อมูลสมาชิก",
+              "พัฒนา หน้าสมาชิกเพื่อจัดการข้อมูลสมาชิก",
             ],
           },
           { type: "h3", text: "เฟสสอง (กลุ่มใหญ่)" },
@@ -53,7 +54,7 @@ function getModalContent(key: ProjectKey): ProjectDetail {
             items: [
               "ปรับปรุง UI ของตารางข้อมูล ให้ใช้งานง่ายขึ้น",
               "พัฒนา ปุ่มกด และ Popup สำหรับเพิ่ม/ลบข้อมูล",
-              "ทำงาน เฉพาะฝั่ง Frontend (User Interface) เน้นการใช้งานจริงและความสวยงามของระบบ",
+              "พัฒนา เฉพาะฝั่ง Frontend (User Interface) เน้นการใช้งานจริงและความสวยงามของระบบ",
             ],
           },
         ],
@@ -73,12 +74,13 @@ function getModalContent(key: ProjectKey): ProjectDetail {
 
     case "ceth":
       return {
-        title: "CETH — Activity & Certificate System",
+        title: "Cooperative Education Training Hour Tracking System",
+        year: "2025-Present",
         img: "/myprofilepimpi/images/ceth1.png",
         content: [
           {
             type: "p",
-            text: "ระบบจัดการชั่วโมงอบรมสหกิจพัฒนานักศึกษา เพื่อความสะดวกในการจัดกิจกรรมอบรม แบ่งเป็น 2 ฝั่งผู้ใช้งานหลัก:",
+            text: "ระบบจัดการชั่วโมงอบรมสหกิจเป็นโปรเจ็คพัฒนาในรูปแบบกลุ่ม 8 คน เพื่อความสะดวกในการจัดกิจกรรมอบรม แบ่งเป็น 2 ฝั่งผู้ใช้งานหลัก:",
           },
           {
             type: "p",
@@ -101,7 +103,7 @@ function getModalContent(key: ProjectKey): ProjectDetail {
             items: [
               "ลงทะเบียนและยกเลิกกิจกรรม",
               "ตรวจสอบชั่วโมงการอบรมที่เข้าร่วม",
-              "ดูและสั่งพิมพ์เกียรติบัตร",
+              "ตรวจสอบเกียรติบัตร",
               "ดูประวัติการเข้าร่วมอบรม"
             ]
           },
@@ -133,10 +135,11 @@ function getModalContent(key: ProjectKey): ProjectDetail {
             "https://github.com/playerwave/ceth-frontend",
             "https://github.com/playerwave/ceth-backend"
           ]],
+          ["Figma URL", [
+            "https://www.figma.com/design/n8tTK4VOgHxkQq1ul02EwD/Cooperative-Education-Training-Hour-Tracking-System?node-id=2-8744&p=f&t=7dVTrqKOIQeDTBMa-0"
+          ]],
         ],
       };
-
-
     default:
       throw new Error(`Unknown project key: ${key}`);
   }

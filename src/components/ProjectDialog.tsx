@@ -84,6 +84,9 @@ export default function ProjectDialog({ open, detail, onClose }: ProjectDialogPr
                                 <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900">
                                     {detail.title}
                                 </h3>
+                                {detail.year && (
+                                    <p className="text-sm text-gray-500 mt-1">{detail.year}</p>
+                                )}
 
                                 <div className="mt-4 text-gray-700 leading-relaxed space-y-4">
                                     {detail.content.map((b: ContentBlock, i) => {
