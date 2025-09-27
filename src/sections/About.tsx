@@ -10,7 +10,7 @@ export default function About() {
             <div className="relative overflow-hidden rounded-2xl bg-gray-100 ring-1 ring-black/5 shadow-md">
               <div className="aspect-[3/4] sm:aspect-[4/5]">
                 <img
-                  src="public\images\pale.jpeg"
+                  src="/myprofilepimpi/images\pale.jpeg"
                   alt="Profile"
                   loading="lazy"
                   className="h-full w-full object-cover"

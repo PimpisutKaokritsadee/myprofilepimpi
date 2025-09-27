@@ -10,14 +10,14 @@ const projects: Project[] = [
     title: "Coffee-Shop(D-Coffee)",
     desc: "ร้านกาแฟที่รวมระบบ POS, สินค้า, สต็อก, โปรโมชั่น, สมาชิก, พนักงาน และเงินเดือน",
     tags: ["Vue", "TypeScript", "Vuetify"],
-    image: "public/images/coffee-pos.png",
+    image: "/myprofilepimpi/images/coffee-pos.png",
   },
   {
     key: "ceth",
     title: "Cooperative Education Training Hour Tracking System",
     desc: "ระบบสำหรับจัดการลงทะเบียน/ยกเลิกการอบรมและเก็บชั่วโมงสหกิจของนักศึกษาแต่ละคน",
     tags: ["React", "TypeScript", "Tailwind"],
-    image: "public/images/ceth.png",
+    image: "/myprofilepimpi/images/ceth.png",
   },
 ];
 
@@ -26,7 +26,7 @@ function getModalContent(key: ProjectKey): ProjectDetail {
     case "coffee":
       return {
         title: "Coffee-Shop(D-Coffee)",
-        img: "public/images/coffee-logg.png",
+        img: "/myprofilepimpi/images/coffee-logg.png",
         content: [
           { type: "p", text: "D-Coffee เป็นระบบจัดการร้านกาแฟ ที่รวมฟังก์ชัน POS (Point of Sale), การจัดการสต็อกสินค้า, สมาชิกและพนักงาน, เงินเดือน/เวลาเข้า-ออกงาน, และ โปรโมชั่น เข้าไว้ด้วยกัน" },
           { type: "p", text: "โครงการนี้พัฒนาในรูปแบบ กลุ่ม 8 คน โดยแบ่งเป็น 2 เฟส:" },
@@ -74,7 +74,7 @@ function getModalContent(key: ProjectKey): ProjectDetail {
     case "ceth":
       return {
         title: "CETH — Activity & Certificate System",
-        img: "public/images/ceth1.png",
+        img: "/myprofilepimpi/images/ceth1.png",
         content: [
           {
             type: "p",
