@@ -21,9 +21,6 @@ export default function ProjectDialog({ open, detail, onClose }: ProjectDialogPr
         document.body.style.overflow = "hidden";
         if (scrollbarW > 0) document.body.style.paddingRight = `${scrollbarW}px`;
 
-        const preventTouch = (e: TouchEvent) => e.preventDefault();
-        document.addEventListener("touchmove", preventTouch, { passive: false });
-
         closeBtnRef.current?.focus();
         const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
         document.addEventListener("keydown", onKey);
@@ -31,7 +28,7 @@ export default function ProjectDialog({ open, detail, onClose }: ProjectDialogPr
         return () => {
             document.body.style.overflow = origOverflow;
             document.body.style.paddingRight = origPadRight;
-            document.removeEventListener("touchmove", preventTouch);
+
             document.removeEventListener("keydown", onKey);
         };
     }, [open, onClose]);
@@ -49,7 +46,8 @@ export default function ProjectDialog({ open, detail, onClose }: ProjectDialogPr
                 {/* การ์ดโมดัล */}
                 <div
                     className="relative w-full max-w-5xl rounded-3xl bg-white shadow-2xl ring-1 ring-black/10
-             overflow-y-auto max-h-[90svh] flex flex-col"   // <-- โมดัลสกอลได้ตัวเดียวบนมือถือ
+                     overflow-y-auto max-h-[90vh] md:max-h-none flex flex-col overscroll-contain"
+                    style={{ WebkitOverflowScrolling: "touch" }}
                     onClick={(e) => e.stopPropagation()}
                 >
                     {/* ปุ่มปิด อยู่ข้างนอก ไม่โดนตัด */}
@@ -80,7 +78,7 @@ export default function ProjectDialog({ open, detail, onClose }: ProjectDialogPr
 
                             {/* พื้นที่สกอลของเนื้อหา: มือถือ = ไม่สกอล, เดสก์ทอป = สกอล */}
                             <div
-                                className="h-auto overflow-visible+   md:h-full md:overflow-y-auto md:pb-20 overscroll-contain"
+                                className="h-auto overflow-visible md:h-full md:overflow-y-auto md:pb-20 overscroll-contain"
                                 style={{ scrollbarGutter: "stable" }}
                             >
                                 <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight text-gray-900">
