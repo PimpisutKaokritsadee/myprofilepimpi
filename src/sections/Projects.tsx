@@ -129,7 +129,7 @@ function getModalContent(key: ProjectKey): ProjectDetail {
           }
         ],
         rows: [
-          ["Type", "Web App"],
+          ["Type", "Website"],
           ["Tech", "React, TypeScript, Tailwind"],
           ["Git URL", [
             "https://github.com/playerwave/ceth-frontend",
