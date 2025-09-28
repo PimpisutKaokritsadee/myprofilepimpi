@@ -35,8 +35,7 @@ export default function Education() {
               The Computer Science program focuses on algorithm design and
               applying algorithms in programming. The curriculum emphasizes
               advanced programming, computational processes, and applied
-              mathematics — ideal for students who want to be software engineers
-              or algorithm developers.
+              mathematics.
             </p>
           </article>
         </Reveal>
